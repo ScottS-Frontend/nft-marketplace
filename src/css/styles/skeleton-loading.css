@@ -1,7 +1,12 @@
 /* Skeleton Loading Styles */
+<<<<<<< Updated upstream
 .skeleton-box,
 .skeleton-circle,
 .skeleton-text {
+=======
+
+.skeleton {
+>>>>>>> Stashed changes
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
@@ -12,6 +17,64 @@
   border-radius: 50%;
 }
 
+<<<<<<< Updated upstream
+=======
+.skeleton-text {
+  border-radius: 4px;
+  line-height: 1;
+}
+
+/* Skeleton text lines container */
+.skeleton-text-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Skeleton Loading Layout Components */
+.skeleton-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Size Utility Classes */
+.w-40 {
+  width: 40%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-80 {
+  width: 80px;
+}
+.w-100 {
+  width: 100%;
+}
+
+.h-20 {
+  height: 20px;
+}
+.h-50 {
+  height: 50px;
+}
+.h-200 {
+  height: 200px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-1 {
+  margin-bottom: 4px;
+}
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+>>>>>>> Stashed changes
 @keyframes shimmer {
   0% {
     background-position: 200% 0;
@@ -19,4 +82,14 @@
   100% {
     background-position: -200% 0;
   }
+<<<<<<< Updated upstream
 }
+=======
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
+>>>>>>> Stashed changes

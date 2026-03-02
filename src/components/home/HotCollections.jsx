@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
+<<<<<<< Updated upstream
 
 // Skeleton Card Component
 const SkeletonCard = () => (
@@ -30,6 +31,13 @@ const SkeletonCard = () => (
     </div>
   </div>
 );
+=======
+import {
+  HotCollectionsSkeleton,
+  SkeletonSection,
+  useLoadingDelay,
+} from "../Skeleton/Skeleton";
+>>>>>>> Stashed changes
 
 const HotCollections = () => {
   const [collections, setCollections] = useState([]);
