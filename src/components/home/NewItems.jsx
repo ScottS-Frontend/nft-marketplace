@@ -2,14 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
-<<<<<<< Updated upstream
-=======
-import {
-  NewItemsSkeleton,
+import { 
+  NewItemsSkeleton, 
   SkeletonSection,
-  useLoadingDelay,
+  useLoadingDelay 
 } from "../Skeleton/Skeleton";
->>>>>>> Stashed changes
 
 const Countdown = ({ expiryDate }) => {
   const [timeLeft, setTimeLeft] = React.useState(expiryDate - Date.now());
