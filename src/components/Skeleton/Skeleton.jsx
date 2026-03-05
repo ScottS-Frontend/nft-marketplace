@@ -131,6 +131,129 @@ export const TopSellersSkeleton = ({ count = 12 }) => (
   </div>
 );
 
+// Explore Items Skeleton Layout
+export const ExploreItemsSkeleton = ({ count = 8 }) => (
+  <>
+    <div>
+      <select id="filter-items" defaultValue="" disabled>
+        <option value="">Default</option>
+        <option value="price_low_to_high">Price, Low to High</option>
+        <option value="price_high_to_low">Price, High to Low</option>
+        <option value="likes_high_to_low">Most liked</option>
+      </select>
+    </div>
+    {Array.from({ length: count }).map((_, index) => (
+      <div
+        className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
+        key={index}
+        style={{ display: "block", backgroundSize: "cover" }}
+      >
+        <div className="nft__item">
+          <div className="author_list_pp">
+            <SkeletonCircle style={{ width: "50px", height: "50px" }} />
+          </div>
+          <SkeletonBox
+            className="de_countdown"
+            style={{ width: "100px", height: "24px" }}
+          />
+          <div className="nft__item_wrap">
+            <SkeletonBox style={{ height: "200px", width: "100%" }} />
+          </div>
+          <div className="nft__item_info">
+            <SkeletonText
+              style={{ width: "60%", height: "20px", marginBottom: "8px" }}
+            />
+            <SkeletonText style={{ width: "40%", height: "16px" }} />
+          </div>
+        </div>
+      </div>
+    ))}
+  </>
+);
+
+// Author Skeleton Layout
+export const AuthorSkeleton = ({ count = 4 }) => (
+  <div className="row">
+    <div className="col-lg-12 text-center">
+      <h2>Hot Collections</h2>
+      <div className="small-border bg-color-2"></div>
+    </div>
+    {Array.from({ length: count }).map((_, index) => (
+      <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
+        <div className="nft_coll">
+          <div className="nft_wrap">
+            <SkeletonBox style={{ height: "200px" }} />
+          </div>
+          <div className="nft_coll_pp">
+            <SkeletonCircle style={{ width: "50px", height: "50px" }} />
+          </div>
+          <div className="nft_coll_info text-center">
+            <SkeletonText
+              style={{ width: "60%", height: "20px", marginBottom: "8px" }}
+            />
+            <SkeletonText style={{ width: "40%", height: "16px" }} />
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+// Item Details Skeleton Layout
+export const ItemDetailsSkeleton = () => (
+  <div className="container">
+    <div className="row">
+      <div className="col-md-6 text-center">
+        <SkeletonBox style={{ height: "400px", width: "100%" }} />
+      </div>
+      <div className="col-md-6">
+        <div className="item_info">
+          <SkeletonText style={{ width: "60%", height: "32px", marginBottom: "20px" }} />
+          
+          <div className="item_info_counts" style={{ marginBottom: "20px" }}>
+            <SkeletonBox style={{ width: "80px", height: "24px", display: "inline-block", marginRight: "10px" }} />
+            <SkeletonBox style={{ width: "80px", height: "24px", display: "inline-block" }} />
+          </div>
+          
+          <SkeletonText lines={3} style={{ marginBottom: "20px" }} />
+          
+          <div className="d-flex flex-row" style={{ marginBottom: "20px" }}>
+            <div className="mr40">
+              <SkeletonText style={{ width: "50px", height: "16px", marginBottom: "10px" }} />
+              <div className="item_author">
+                <div className="author_list_pp">
+                  <SkeletonCircle style={{ width: "50px", height: "50px" }} />
+                </div>
+                <div className="author_list_info">
+                  <SkeletonText style={{ width: "100px", height: "16px" }} />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div style={{ marginTop: "20px" }}>
+            <SkeletonText style={{ width: "50px", height: "16px", marginBottom: "10px" }} />
+            <div className="item_author">
+              <div className="author_list_pp">
+                <SkeletonCircle style={{ width: "50px", height: "50px" }} />
+              </div>
+              <div className="author_list_info">
+                <SkeletonText style={{ width: "100px", height: "16px" }} />
+              </div>
+            </div>
+          </div>
+          
+          <div className="spacer-40"></div>
+          <SkeletonText style={{ width: "50px", height: "16px", marginBottom: "10px" }} />
+          <div className="nft-item-price">
+            <SkeletonBox style={{ width: "100px", height: "24px" }} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // Section wrapper with consistent styling
 export const SkeletonSection = ({ children, id, className = "" }) => (
   <section id={id} className={className}>
@@ -146,5 +269,8 @@ export default {
   HotCollectionsSkeleton,
   NewItemsSkeleton,
   TopSellersSkeleton,
+  ExploreItemsSkeleton,
+  AuthorSkeleton,
+  ItemDetailsSkeleton,
   SkeletonSection,
 };

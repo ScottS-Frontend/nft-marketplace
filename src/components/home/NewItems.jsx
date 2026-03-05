@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
-<<<<<<< Updated upstream
-=======
 import {
   NewItemsSkeleton,
   SkeletonSection,
   useLoadingDelay,
 } from "../Skeleton/Skeleton";
->>>>>>> Stashed changes
 
 const Countdown = ({ expiryDate }) => {
   const [timeLeft, setTimeLeft] = React.useState(expiryDate - Date.now());
@@ -34,17 +31,19 @@ const Countdown = ({ expiryDate }) => {
   );
 };
 
-const NewItems = () => {
-  const [items, setItems] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
-  const showSkeleton = useLoadingDelay(loading, 300); // 300ms delay
+import { owlCarouselOptions } from "../UI/carouselConfig";
 
-  React.useEffect(() => {
+const NewItems = () => {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const showSkeleton = useLoadingDelay(loading, 300);
+
+  useEffect(() => {
     const fetchItems = async () => {
       try {
         const response = await axios.get(
-          "https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems"
+          "https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems",
         );
         setItems(response.data);
       } catch (error) {
@@ -56,19 +55,6 @@ const NewItems = () => {
     };
     fetchItems();
   }, []);
-
-  const options = {
-    loop: true,
-    margin: 10,
-    nav: true,
-    items: 4,
-    slideBy: 1,
-    responsive: {
-      0: { items: 1 },
-      768: { items: 2 },
-      1024: { items: 4 },
-    },
-  };
 
   if (showSkeleton) {
     return (
@@ -104,20 +90,20 @@ const NewItems = () => {
     <section id="section-items" className="no-bottom">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-12" data-aos="fade-in">
             <div className="text-center">
               <h2>New Items</h2>
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
           <div className="col-lg-12">
-            <OwlCarousel className="owl-theme" {...options}>
+            <OwlCarousel className="owl-theme" {...owlCarouselOptions}>
               {items.map((item) => (
-                <div className="item" key={item.id}>
+                <div className="item" key={item.id} data-aos="fade-in">
                   <div className="nft__item">
                     <div className="author_list_pp">
                       <Link
-                        to="/author"
+                        to={`/author/${item.authorId}`}
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         title="Creator: Monica Lucas"
