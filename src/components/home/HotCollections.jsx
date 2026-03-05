@@ -4,7 +4,7 @@ import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
 import { owlCarouselOptions } from "../UI/carouselConfig";
 import {
-  HotCollectionSkeleton,
+  HotCollectionsSkeleton,
   SkeletonSection,
   useLoadingDelay,
 } from "../Skeleton/Skeleton"

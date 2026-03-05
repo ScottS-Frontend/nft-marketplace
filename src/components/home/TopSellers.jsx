@@ -4,7 +4,7 @@ import axios from "axios";
 import {
   TopSellersSkeleton,
   SkeletonSection,
-  useLoadDelay,
+  useLoadingDelay,
 } from "../Skeleton/Skeleton";
 
 const TopSellers = () => {
