@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import {
+  TopSellersSkeleton,
+  SkeletonSection,
+  useLoadDelay,
+} from "../Skeleton/Skeleton";
 
 const TopSellers = () => {
   const [items, setItems] = React.useState([]);
