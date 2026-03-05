@@ -30,7 +30,7 @@ const SkeletonCard = () => (
     </div>
   </div>
 );
-=======
+
 import { owlCarouselOptions } from "../UI/carouselConfig";
 
 

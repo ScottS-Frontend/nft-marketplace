@@ -7,6 +7,7 @@ import {
   SkeletonSection,
   useLoadingDelay,
 } from "../Skeleton/Skeleton";
+import { owlCarouselOptions } from "../UI/carouselConfig";
 
 const Countdown = ({ expiryDate }) => {
   const [timeLeft, setTimeLeft] = React.useState(expiryDate - Date.now());
@@ -31,7 +32,6 @@ const Countdown = ({ expiryDate }) => {
   );
 };
 
-import { owlCarouselOptions } from "../UI/carouselConfig";
 
 const NewItems = () => {
   const [items, setItems] = useState([]);
