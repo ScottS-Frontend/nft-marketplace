@@ -64,10 +64,6 @@ This project fetches live NFT data from public cloud functions endpoints:
 
 No API key or authentication is required.
 
-## Screenshots
-
-Add screenshots here to showcase the UI.
-
 ## About This Project
 
 This project was built as part of the Frontend Simplified (FES) Institute Bootcamp to demonstrate practical skills in:
