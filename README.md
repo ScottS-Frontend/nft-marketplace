@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# NFT Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive NFT marketplace landing page built with Next.js, featuring dynamic sections for hot collections, new items, top sellers, and category browsing with a modern purple-gradient design system.
 
-## Available Scripts
+Integrated with a live API to fetch and display real-time NFT data, including collection metadata, item pricing, and seller rankings.
 
-In the project directory, you can run:
+Built as an FES Institute bootcamp project focused on API integration and e-commerce UI patterns.
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[View Live Site](https://nftmarketplace-scott.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Hot Collections - Browse trending NFT collections with live metadata
+- New Items - Discover recently listed NFTs with real-time pricing
+- Top Sellers - View ranked seller profiles and performance stats
+- Category Browsing - Filter and explore NFTs by category
+- Responsive Design - Fully optimized for desktop, tablet, and mobile
+- Modern UI - Purple-gradient design system with clean, polished aesthetics
+- Live API Integration - Real-time NFT data fetched from external REST API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- Next.js - React framework with App Router
+- React - UI library
+- JavaScript - Core language
+- Tailwind CSS - Utility-first styling
+- REST API - Live NFT data source
+- Vercel - Deployment and hosting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+   ```bash
+   git clone https://github.com/ScottS-Frontend/nft-marketplace.git
+   cd nft-marketplace
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Set up environment variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Create a `.env.local` file in the root directory and add your API configuration:
+   ```env
+   NEXT_PUBLIC_API_BASE_URL=your_api_base_url
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Run the development server
+   ```bash
+   npm run dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open in browser
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Navigate to http://localhost:3000
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Add screenshots here to showcase the UI.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## About This Project
 
-### Code Splitting
+This project was built as part of the Frontend Simplified (FES) Institute Bootcamp to demonstrate practical skills in:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- REST API integration and dynamic data rendering
+- E-commerce UI patterns and product browsing flows
+- Responsive, component-driven layout design
+- Modern CSS styling with Tailwind CSS
+- Next.js routing and page architecture
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is for educational and portfolio purposes.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Scott Slagle
