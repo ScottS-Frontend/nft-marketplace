@@ -2,7 +2,7 @@
 
 A fully responsive NFT marketplace landing page built with Next.js, featuring dynamic sections for hot collections, new items, top sellers, and category browsing with a modern purple-gradient design system.
 
-Integrated with a live API to fetch and display real-time NFT data, including collection metadata, item pricing, and seller rankings.
+Integrated with a live public API to fetch and display real-time NFT data, including collection metadata, item pricing, and seller rankings. No API key or authentication required.
 
 Built as an FES Institute bootcamp project focused on API integration and e-commerce UI patterns.
 
@@ -18,7 +18,8 @@ Built as an FES Institute bootcamp project focused on API integration and e-comm
 - Category Browsing - Filter and explore NFTs by category
 - Responsive Design - Fully optimized for desktop, tablet, and mobile
 - Modern UI - Purple-gradient design system with clean, polished aesthetics
-- Live API Integration - Real-time NFT data fetched from external REST API
+- Live API Integration - Real-time NFT data fetched from public cloud functions API
+- Skeleton Loading States - Smooth loading experience while data fetches
 
 ## Tech Stack
 
@@ -26,7 +27,9 @@ Built as an FES Institute bootcamp project focused on API integration and e-comm
 - React - UI library
 - JavaScript - Core language
 - Tailwind CSS - Utility-first styling
-- REST API - Live NFT data source
+- Axios - HTTP client for API requests
+- Owl Carousel - Touch-enabled responsive carousel
+- REST API - Live NFT data from public cloud functions
 - Vercel - Deployment and hosting
 
 ## Installation
@@ -42,21 +45,24 @@ Built as an FES Institute bootcamp project focused on API integration and e-comm
    npm install
    ```
 
-3. Set up environment variables
-
-   Create a `.env.local` file in the root directory and add your API configuration:
-   ```env
-   NEXT_PUBLIC_API_BASE_URL=your_api_base_url
-   ```
-
-4. Run the development server
+3. Run the development server
    ```bash
    npm run dev
    ```
 
-5. Open in browser
+4. Open in browser
 
    Navigate to http://localhost:3000
+
+## API Reference
+
+This project fetches live NFT data from public cloud functions endpoints:
+
+- Hot Collections: `https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections`
+- New Items: `https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems`
+- Top Sellers: `https://us-central1-nft-cloud-functions.cloudfunctions.net/topSellers`
+
+No API key or authentication is required.
 
 ## Screenshots
 
@@ -71,6 +77,7 @@ This project was built as part of the Frontend Simplified (FES) Institute Bootca
 - Responsive, component-driven layout design
 - Modern CSS styling with Tailwind CSS
 - Next.js routing and page architecture
+- Loading state management and skeleton screens
 
 ## License
 
